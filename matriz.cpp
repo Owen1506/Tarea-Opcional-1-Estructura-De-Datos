@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdlib>
 using namespace std;
 int filas;
 int columnas;
@@ -45,7 +46,7 @@ void crearMatriz(int matriz[20][20], int filas, int columnas, int matriz2[20][20
         printf("[ ");
         for (int j = 0; j < columnas; j++)
         {
-            matriz[i][j] = cont;
+            matriz[i][j] = std::rand ()%1023;
             cont += 1;
             printf("%i", matriz[i][j]);
             if (j + 1 < columnas) {
@@ -66,7 +67,7 @@ void crearMatriz(int matriz[20][20], int filas, int columnas, int matriz2[20][20
         printf("[ ");
         for (int j = 0; j < columnas2; j++)
         {
-            matriz2[i][j] = cont - cont2;
+            matriz2[i][j] = std::rand ()%1023;
             cont2 += 1;
             printf("%i", matriz2[i][j]);
             if (j + 1 < columnas2) {
